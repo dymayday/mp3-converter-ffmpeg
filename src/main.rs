@@ -1,5 +1,3 @@
-#![allow(dead_code, unused_variables)]
-
 use std::{ffi::OsStr, fs, path::Path, sync::RwLock};
 
 use clap::Parser;
@@ -75,7 +73,7 @@ fn par_convert_files(root_in: &str, root_out: &str, files: &[String], skip: bool
                 // info!("[{:>4} / {}] : {}", *counter, max_len, fout_name);
                 *counter
             };
-            let fin_name = Path::new(fin).file_name().unwrap().to_str().unwrap();
+            // let fin_name = Path::new(fin).file_name().unwrap().to_str().unwrap();
             let fout_path = Path::new(fout);
             let fout_name = fout_path.file_name().unwrap().to_str().unwrap();
 
